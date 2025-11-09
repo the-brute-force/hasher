@@ -1,0 +1,39 @@
+.Dd November 9, 2025
+.Dt HASHER 1
+.Os
+
+.Sh NAME
+.Nm hasher
+.Nd renames files in a directory by their hash
+
+.Sh SYNOPSIS
+.Nm
+.Pa directory
+.Op Pa conflicts
+
+.Sh DESCRIPTION
+The
+.Nm
+tool recursively renames all files in a directory according to their MD5 hash.
+
+.Sh OPTIONS
+.Bl -tag -width x
+.It Pa directory
+Parent directory for files to be searched and renamed.
+.It Op Pa conflicts
+The file that any file that had a conflict when attempting to rename it will be written to.
+.Em NOTE:
+When a conflict file is provided,
+.Nm
+will run in parallel and not stop when there is a conflict.
+.El
+
+.Sh EXIT STATUS
+.Nm
+will return 1 if there are any errors.
+Otherwise,
+.Nm
+exits with status code 0.
+
+.Sh AUTHORS
+.An Harry N
