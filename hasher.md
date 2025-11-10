@@ -10,6 +10,7 @@ The **hasher** tool recursively renames all files in a directory according to th
 ### OPTIONS
 <u>directory</u>  
 Parent directory for files to be searched and renamed.
+All hidden files and symbolic links are ignored.
 
 [<u>conflicts</u>]  
 The file that any file that had a conflict when attempting to rename it will be written to.

@@ -20,6 +20,7 @@ tool recursively renames all files in a directory according to their MD5 hash.
 .Bl -tag -width x
 .It Pa directory
 Parent directory for files to be searched and renamed.
+All hidden files and symbolic links are ignored.
 .It Op Pa conflicts
 The file that any file that had a conflict when attempting to rename it will be written to.
 .Em NOTE:

@@ -1,7 +1,7 @@
 .POSIX:
 CC        = clang
 OBJCFLAGS = -fobjc-arc -Wall -O3
-LDLIBS    = -framework Cocoa -framework Foundation
+LDLIBS    = -framework Foundation
 PREFIX    = /usr/local
 
 all: hasher
