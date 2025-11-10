@@ -67,7 +67,10 @@ BOOL renameFile(NSString *source)
 
     NSString *target = [[targetDir stringByAppendingPathComponent:hash] stringByAppendingPathExtension:extension];
 
-    BOOL success = [[NSFileManager defaultManager] moveItemAtPath:source toPath:target error:nil];
+    BOOL success = YES;
+
+    if (![source isEqualToString:target])
+        success = [[NSFileManager defaultManager] moveItemAtPath:source toPath:target error:nil];
 
     return success;
 }
